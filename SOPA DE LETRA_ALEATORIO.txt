@@ -1,0 +1,60 @@
+///////////////////matriz n*n 
+Scanner sc=new Scanner(System.in);
+        //PABLRA PRUEBA
+        String nombre="SS";
+        //MATRIZ CONVERTIDORA DE LA PALABRA PRUEBA A UN CADENA DE CHARS
+        int tamaño_palabra = nombre.length();
+        char[] aCaracteres;
+        //CONVERTIR A UNA MATRIZ LA PALABRA PRUEBA
+        char[] aCaractres=nombre.toCharArray(); 
+        ///NOMBRE DONDE COMINEZA LA LETRA
+        char comienzo='a';
+        //MATRIZ N*N
+        char letras[][];
+        int fila=0;
+        //INGRESAR FILAS Y COLUMNAS
+        System.out.println("Ingrese el numero de filas");
+        int n=sc.nextInt();
+        //MATRIZ DE N COLUMNAS Y M FILAS
+        letras = new char[n][n];
+        // NUMERO ALEATORIOS
+        int aleatorio_h=(int)(Math.random()*(n-1)+0);
+        int aleatorio_dos_h=(int)(Math.random()*(n-tamaño_palabra)+0);
+        // IMPRIMIR NUMERO ALEATORIO EL UNO Y EL DOS       
+        System.out.println(aleatorio_h+" "+aleatorio_dos_h+" "+tamaño_palabra);
+        if(tamaño_palabra-1<n){
+            //CICLO PARA SUMAR LA VARIABLE CHAR Y AUMENTAR UNA LETRA
+            for(int a=0;a<letras.length;a++) {
+            //CICLO PARA AUMENTAR DE LA A-Z
+                for(int c=0;c<letras[a].length;c++) {
+                    int n_letra=(int)(Math.random()*26+0);
+                    //CONDICION PARA QUE EL CICLO TERMINE HASTA LA LETRA Z
+                    letras[a][c]=(char)+(+comienzo+n_letra);  
+                } 
+            }
+            // SOBRE ESCRIBE LA MATRIZ E IMPRIME LA BALBRA
+            for(int a=0;a<aCaractres.length;a++){
+                    letras[aleatorio_h][aleatorio_dos_h+a]=aCaractres[a];
+            }
+        //CILCO PARA IMPRIMIR LA MATRIZ, OTRA MANERA DE IMPIMIR UNA MATRIZ      
+            while(fila<n){
+                for(int a=0;a<n;a++){
+                    System.out.print("|");
+                    System.out.print(letras[fila][a]+"|");
+                }System.out.println();
+                fila++;
+        }
+        }else{
+            System.out.println("NO SEA BALUDO");
+        }
+
+/////////////////////////////////////////////////
+String nombre="ABCDEFGHIJKLMNÑOPQRST";
+        int numero_palabras_ingresadas;
+        String n;
+        ///////////////////            
+        numero_palabras_ingresadas=sc.nextInt();
+        char[] aCaracteres;
+        char[] aCaractres=nombre.toCharArray();
+            n=sc.nextLine();
+            System.out.println(n); 
